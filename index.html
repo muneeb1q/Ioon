@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I'm Sorry!</title>
+    <style>
+        /* Mobile-friendly and modern styling */
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #fdf2f8; /* Soft pink background */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+            color: #333;
+        }
+
+        .container {
+            background: white;
+            padding: 2.5rem 1.5rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            max-width: 90%;
+            width: 400px;
+            box-sizing: border-box;
+        }
+
+        h1 {
+            color: #db2777; /* Deeper pink for the header */
+            margin-top: 0;
+            font-size: 2rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            color: #555;
+        }
+
+        .note {
+            font-style: italic;
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Styling for the forgiveness button */
+        button {
+            background-color: #db2777;
+            color: white;
+            border: none;
+            padding: 14px 28px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            border-radius: 30px;
+            cursor: pointer;
+            margin-top: 10px;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(219, 39, 119, 0.3);
+        }
+
+        button:hover {
+            background-color: #be185d;
+            transform: scale(1.05);
+        }
+
+        button:active {
+            transform: scale(0.95);
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>I'm So Sorry🥺</h1>
+        <p>Dear <strong>Asfaa💗</strong>,</p>
+        <p>I messed up.Aawaii Choti si baat pr Gussa ho gia me.Our friendship means the world to me💕and I hate knowing that I upset you.Soory yrr Asfaa again.</p>
+        <p class="note">Ab Man jao gi na🥺? Meri life ki Sb se Achii or Paiyari Dost ho Tum💗 </p>
+        
+        <button id="forgiveBtn">I Forgive You!</button>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
+    <script>
+        // Trigger confetti when the button is clicked
+        const button = document.getElementById('forgiveBtn');
+        
+        button.addEventListener('click', function() {
+            // Fire the confetti
+            confetti({
+                particleCount: 150,
+                spread: 70,
+                origin: { y: 0.6 },
+                colors: ['#db2777', '#fbcfe8', '#ffffff', '#f472b6'] // Matching pink/white colors
+            });
+            
+            // Change the text to show gratitude
+            this.innerText = "Thank you Asfaa ❤️";
+            this.style.backgroundColor = "#10b981"; // Changes to a happy green
+            this.style.boxShadow = "0 4px 10px rgba(16, 185, 129, 0.3)";
+            
+            // Disable the button so they don't spam it (optional)
+            this.disabled = true;
+            this.style.cursor = "default";
+            this.style.transform = "none";
+        });
+    </script>
+
+</body>
+</html>
